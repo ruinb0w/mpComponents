@@ -1,0 +1,20 @@
+<view class="weather">
+  <view class="shadow"></view>
+  <image class="weather-back" src="../../asset/img/weather-back.png" />
+  <image class="face" src="{{currentWeather.icon}}" />
+  <image bind:tap="closeWeather" class="close" src="../../asset/icons/close.png" />
+  <view class="info-1">
+    <view class="weather-status">天气:{{weatherStatus}} 温度:{{temperature}}℃</view>
+    <block wx:if="{{advice}}">
+      <view class="tip">{{adviceTip||'温馨提示'}}:</view>
+      <view class="tip-desc">{{currentWeather.tip}}</view>
+    </block>
+  </view>
+  <block wx:if="{{welcome}}">
+    <view class="info-2">
+      <view class="welcome">{{welcomeSentence || ""}}</view>
+      <view class="location">{{welcomeLocation || ""}}</view>
+    </view>
+  </block>
+  <button class="i-know" bind:tap="closeWeather">知道了</button>
+</view>
