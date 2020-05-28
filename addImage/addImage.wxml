@@ -1,0 +1,7 @@
+<!--components/addImage/addImage.wxml-->
+<view class="imageContainer">
+  <image  wx:for="{{imageList}}" wx:key="{{index}}" 
+  data-index="{{index}}" src="{{item}}" mode="aspectFit"
+  bind:tap="removeImage"/>
+  <image wx:if="{{imageList.length < 8}}" src="./icons/addImage.png" bind:tap="addImage"/>
+</view>
