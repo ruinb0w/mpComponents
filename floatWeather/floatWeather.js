@@ -1,6 +1,5 @@
 // components/floatWeather/floatWeather.js
-const weatherKey = 'SCvQ24WiOY6_RwVLS';
-const weatherUrl = 'https://api.seniverse.com/v3/weather/now.json';
+const {weatherKey, weatherUrl} = require('./config.js');
 
 Component({
   properties: {
